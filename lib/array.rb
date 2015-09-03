@@ -1,6 +1,5 @@
 class Array
   def michael_inject (arg = 'empty', symbol = nil)
-
     check_arguments arg, symbol
 
     if arg.instance_of? Symbol
@@ -27,9 +26,7 @@ class Array
 
     temp_array.each { |i| total = yield([total,i]) }
     total
-
   end
-
 
   private
 
@@ -39,7 +36,5 @@ class Array
     raise 'argument error' if (arg.instance_of?(Symbol) && symbol.instance_of?(Symbol))
     raise 'argument error' if (arg.instance_of?(Fixnum) && symbol.instance_of?(Fixnum))
     raise 'argument error' if (arg.instance_of?(Symbol) && symbol.instance_of?(Fixnum))
-
   end
-
 end
